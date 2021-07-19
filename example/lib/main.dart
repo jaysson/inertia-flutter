@@ -7,6 +7,7 @@ import 'package:inertia_flutter_example/screens.dart';
 import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
 void main() {
+  Inertia.baseUrl = 'https://demo.inertiajs.com/';
   runApp(MyApp());
 }
 
@@ -19,7 +20,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     configureApp();
-    Inertia.baseUrl = 'https://demo.inertiajs.com/';
     super.initState();
   }
 
