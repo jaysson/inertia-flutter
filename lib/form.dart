@@ -5,6 +5,11 @@ import 'package:dio/dio.dart';
 import 'models.dart';
 import 'store.dart';
 
+/// Form helper for Inertia. Handles form submissions, server side validation errors, and redirections on success.
+/// @see https://inertiajs.com/forms
+///
+/// All the validations are supposed to happen on the server side, thus we do not provide any validation helpers.
+/// However, you are free to implement additional validations on the app in any way you want.
 class InertiaForm<T> {
   final _controller = StreamController<InertiaFormState<T>>.broadcast();
   late InertiaFormState<T> _state;
@@ -13,8 +18,6 @@ class InertiaForm<T> {
   CancelToken? get cancelToken => _cancelToken;
 
   InertiaFormState<T> get state => _state;
-
-  T get values => state.values;
 
   Stream<InertiaFormState<T>> get stateStream => _controller.stream;
 

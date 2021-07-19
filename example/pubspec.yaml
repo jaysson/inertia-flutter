@@ -6,10 +6,11 @@ description: Demonstrates how to use the inertia_flutter plugin.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.13.0 <3.0.0"
 
 dependencies:
-  history: ^1.0.2
+  url_launcher: ^6.0.9
+  infinite_scroll_pagination: ^3.1.0
   flutter:
     sdk: flutter
 

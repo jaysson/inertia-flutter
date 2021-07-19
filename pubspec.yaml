@@ -10,6 +10,7 @@ environment:
 dependencies:
   dio: ^4.0.0
   dio_cookie_manager: ^2.0.0
+  rxdart: ^0.27.1
   cookie_jar: ^3.0.1
   path_provider: ^2.0.2
   flutter:

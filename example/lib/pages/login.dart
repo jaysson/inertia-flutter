@@ -37,7 +37,19 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final _form = InertiaForm(LoginFormData(email: '', password: ''));
+  late InertiaForm<LoginFormData> _form;
+
+  @override
+  void initState() {
+    _form = InertiaForm(LoginFormData(email: '', password: ''));
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _form.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

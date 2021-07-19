@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inertia_flutter/inertia_flutter.dart';
 import 'package:inertia_flutter_example/components.dart';
+import 'package:inertia_flutter_example/pages/unknown.dart';
 import 'package:inertia_flutter_example/screens.dart';
 
 import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
@@ -40,7 +41,8 @@ class _MyAppState extends State<MyApp> {
     final page = pageState.page;
     final exception = pageState.exception;
     if (page != null) {
-      final makeComponent = screens[page.component] ?? (_, __) => Container();
+      final makeComponent =
+          screens[page.component] ?? (_, __) => UnknownScreen();
       return makeComponent(settings, page.props);
     }
     if (exception != null) {

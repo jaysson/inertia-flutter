@@ -10,8 +10,6 @@ typedef ErrorRenderer = Widget Function(
 typedef RouteMaker = Route Function(RouteSettings settings, Widget child);
 typedef PageMaker = Widget Function(RouteSettings settings, PageState page);
 typedef FrameMaker = Widget Function(String path, PageState page);
-typedef ScreensMap
-    = Map<String, Widget Function(RouteSettings settings, dynamic props)>;
 typedef PageMap = Map<String, PageState>;
 typedef AppBuilder = Widget Function(
   GlobalKey<NavigatorState> navigatorKey,
